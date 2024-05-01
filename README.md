@@ -53,3 +53,5 @@
 ### Fragments
 
 ### Splitting components by feature & state
+
+### Forwarded props (proxy props)
