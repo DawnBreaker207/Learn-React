@@ -55,3 +55,27 @@
 ### Splitting components by feature & state
 
 ### Forwarded props (proxy props)
+
+### public/ vs assets/ fro Image Storage
+
+- _public/_: are made **publicly available** by the underlying project development server & build process
+- Any files stored in **src** are **not made available to the public**. They can't be accessed by website visitors
+
+### Updating state based on old state
+
+```JSX
+setIsEditing(!isEditing)
+```
+
+- If your **new state depends on your previous state** value, you should **NOT** update the state like this
+
+- Instead
+
+```JSX
+setIsEditing(wasEditing => !wasEditing)
+```
+
+- **Pass a function** to your state updating function
+- This function will **automatically be called** by React and will receive the **guaranteed lasted state value**
+
+### Two-way binding
