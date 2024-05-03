@@ -79,3 +79,24 @@ setIsEditing(wasEditing => !wasEditing)
 - This function will **automatically be called** by React and will receive the **guaranteed lasted state value**
 
 ### Two-way binding
+
+### Update Object-State Immutably
+
+- Should **not mutate** **Objects & arrays ** directly
+- Instead create a **(deep) copy** first
+
+```JSX
+// Not creating a copy
+const updateUser = user;
+user.name = 'Anh
+```
+
+```JSX
+// Creating a copy via JS "Spread" operator
+const updateUser = {...user}
+updateUser.name = 'Anh
+```
+
+### Lifting State up
+
+- Lift the state up to the **closest ancestor component** that has access to all components that need to work with that state
